@@ -1,5 +1,5 @@
 const pt = {
-  'meta.role': 'Software Engineer · Frontend & Data',
+  'meta.role': 'Engenheiro de Software atuando com computação em nuvem e infraestrutura.',
   'home.avatarAlt': 'Foto de Gustavo Caris',
   'home.links': 'Links',
   'home.stack': 'Tecnologias',
@@ -42,7 +42,7 @@ const pt = {
 export type MessageKey = keyof typeof pt;
 
 const en: Record<MessageKey, string> = {
-  'meta.role': 'Software Engineer · Frontend & Data',
+  'meta.role': 'Software Engineer working with cloud computing and infrastructure.',
   'home.avatarAlt': 'Photo of Gustavo Caris',
   'home.links': 'Links',
   'home.stack': 'Tech stack',
