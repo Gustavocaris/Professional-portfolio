@@ -4,7 +4,7 @@ import { el } from '../lib/dom';
 import { mountPage, section } from '../lib/layout';
 
 function timelineItem(item: Education): HTMLElement {
-  const statusClass = item.status === 'ongoing' ? 'status status-active' : 'status';
+  const statusClass = item.status === 'paused' ? 'status status-paused' : 'status status-active';
 
   return el('li', { class: 'timeline-item' }, [
     el('div', { class: 'timeline-head' }, [

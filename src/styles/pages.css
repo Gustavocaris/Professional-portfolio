@@ -251,6 +251,12 @@
   color: var(--accent);
 }
 
+.status-paused {
+  border-color: transparent;
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
 /* Skills */
 .badges {
   display: flex;
