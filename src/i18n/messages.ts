@@ -14,6 +14,7 @@ const pt = {
   'controls.toLight': 'Ativar tema claro',
   'controls.toDark': 'Ativar tema escuro',
   'nav.back': 'voltar',
+  'intro.skip': 'Pular',
 
   'projects.title': 'Projetos',
   'projects.lead': 'Alguns projetos de Data Science e Front-end.',
@@ -48,6 +49,7 @@ const en: Record<MessageKey, string> = {
   'controls.toLight': 'Switch to light theme',
   'controls.toDark': 'Switch to dark theme',
   'nav.back': 'back',
+  'intro.skip': 'Skip',
 
   'projects.title': 'Projects',
   'projects.lead': 'Some of my Data Science and Front-end projects.',

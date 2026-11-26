@@ -4,6 +4,7 @@ import { stack } from '../data/stack';
 import { onLangChange, translateStatic } from '../i18n';
 import { createControls } from '../lib/controls';
 import { el } from '../lib/dom';
+import { playIntro } from '../lib/intro';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
@@ -50,3 +51,4 @@ document.querySelectorAll<HTMLElement>('[data-year]').forEach((node) => {
 renderMarquee();
 translateStatic();
 onLangChange(() => translateStatic());
+void playIntro();

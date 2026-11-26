@@ -19,6 +19,21 @@
             root.lang = lang === 'en' ? 'en' : 'pt-BR';
         })();
     </script>
+    <!-- Intro de partículas: só ao entrar no site ou dar F5, nunca ao voltar das páginas internas -->
+    <script>
+        (function () {
+            try {
+                if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+                var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+                var type = nav ? nav.type : '';
+                var internal = false;
+                try { internal = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
+                if (type === 'reload' || (type !== 'back_forward' && !internal)) {
+                    document.documentElement.setAttribute('data-intro', '');
+                }
+            } catch (e) {}
+        })();
+    </script>
     <link rel="icon" href="image/g.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

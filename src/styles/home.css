@@ -269,3 +269,72 @@
     display: none;
   }
 }
+
+/* Intro de partículas (src/lib/intro.ts). O script do <head> marca <html data-intro>. */
+html[data-intro] .home,
+html[data-intro] .controls-floating {
+  opacity: 0;
+  /* Failsafe: se o JS falhar, o cartão aparece mesmo assim */
+  animation: intro-failsafe 0.4s 10s forwards;
+}
+
+@keyframes intro-failsafe {
+  to {
+    opacity: 1;
+  }
+}
+
+html[data-intro-reveal] .home,
+html[data-intro-reveal] .controls-floating {
+  animation: intro-reveal 0.7s var(--ease) both;
+}
+
+@keyframes intro-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.intro-skip {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 51;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-blur);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.intro-skip:hover,
+.intro-skip:focus-visible {
+  border-color: var(--border-hover);
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro,
+  .intro-skip {
+    display: none;
+  }
+
+  html[data-intro] .home,
+  html[data-intro] .controls-floating {
+    opacity: 1;
+  }
+}
