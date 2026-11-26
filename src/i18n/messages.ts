@@ -24,6 +24,14 @@ const pt = {
 
   'certifications.title': 'Certificações',
   'certifications.lead': 'Cursos e certificações que concluí.',
+  'certifications.filter.label': 'Filtrar certificações',
+  'certifications.filter.all': 'Todos',
+  'certifications.filter.cloud': 'Cloud e Infra',
+  'certifications.filter.support': 'Suporte',
+  'certifications.filter.leadership': 'Liderança',
+  'certifications.filter.hackathon': 'Hackathons',
+  'certifications.filter.bootcamp': 'Bootcamp',
+  'certifications.empty': 'Nenhum certificado nesta categoria ainda.',
 
   'education.title': 'Formação',
   'education.lead': 'Minha trajetória acadêmica e as tecnologias com que trabalho.',
@@ -59,6 +67,14 @@ const en: Record<MessageKey, string> = {
 
   'certifications.title': 'Certifications',
   'certifications.lead': 'Courses and certifications I have completed.',
+  'certifications.filter.label': 'Filter certifications',
+  'certifications.filter.all': 'All',
+  'certifications.filter.cloud': 'Cloud & Infra',
+  'certifications.filter.support': 'Support',
+  'certifications.filter.leadership': 'Leadership',
+  'certifications.filter.hackathon': 'Hackathons',
+  'certifications.filter.bootcamp': 'Bootcamp',
+  'certifications.empty': 'No certificates in this category yet.',
 
   'education.title': 'Education',
   'education.lead': 'My academic background and the technologies I work with.',
