@@ -5,7 +5,7 @@ export type EducationStatus = 'ongoing' | 'completed' | 'paused';
 export const statusLabels: Record<EducationStatus, Localized> = {
   ongoing: { pt: 'Em andamento', en: 'In progress' },
   completed: { pt: 'Formado', en: 'Graduated' },
-  paused: { pt: 'Trancado', en: 'On hold' },
+  paused: { pt: 'Interrompido', en: 'Paused' },
 };
 
 export interface Education {
