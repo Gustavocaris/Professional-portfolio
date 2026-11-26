@@ -17,7 +17,8 @@ const pt = {
   'intro.skip': 'Pular',
 
   'projects.title': 'Projetos',
-  'projects.lead': 'Alguns projetos de Data Science e Front-end.',
+  'projects.lead': 'Alguns dos meus projetos, HomeLabs e desenvolvimentos freelance.',
+  'projects.maintenance': 'Em manutenção — em breve atualizaremos esta seção.',
   'projects.code': 'Código',
   'projects.site': 'Site',
   'projects.preview': 'Prévia do projeto',
@@ -60,7 +61,8 @@ const en: Record<MessageKey, string> = {
   'intro.skip': 'Skip',
 
   'projects.title': 'Projects',
-  'projects.lead': 'Some of my Data Science and Front-end projects.',
+  'projects.lead': 'Some of my projects, homelabs and freelance work.',
+  'projects.maintenance': 'Under maintenance — this section will be updated soon.',
   'projects.code': 'Code',
   'projects.site': 'Website',
   'projects.preview': 'Preview of the project',

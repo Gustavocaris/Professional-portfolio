@@ -32,9 +32,13 @@ mountPage({
   title: 'projects.title',
   lead: 'projects.lead',
   render: () =>
-    (Object.keys(categories) as ProjectCategory[]).map((category) =>
-      section(l(categories[category]), [
-        el('div', { class: 'project-grid' }, projects.filter((p) => p.category === category).map(projectCard)),
-      ]),
-    ),
+    (Object.keys(categories) as ProjectCategory[]).map((category) => {
+      const items = projects.filter((p) => p.category === category);
+
+      return section(l(categories[category]), [
+        items.length > 0
+          ? el('div', { class: 'project-grid' }, items.map(projectCard))
+          : el('p', { class: 'empty-state' }, [icon('fa-solid fa-screwdriver-wrench'), ' ', t('projects.maintenance')]),
+      ]);
+    }),
 });

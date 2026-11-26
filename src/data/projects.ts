@@ -1,6 +1,6 @@
 import type { Localized } from '../i18n';
 
-export type ProjectCategory = 'data' | 'front';
+export type ProjectCategory = 'homelab' | 'data' | 'freelance' | 'studies';
 
 export interface Project {
   title: Localized;
@@ -15,9 +15,14 @@ export interface Project {
 // TODO: trocar pelos links de cada repositório.
 const GITHUB = 'https://github.com/Gustavocaris';
 
+// A ordem das chaves define a ordem das seções na página.
+// Categoria sem projetos mostra o aviso "em manutenção".
+// TODO: adicionar os projetos de HomeLabs Cloud e Desenvolvimentos Freelance.
 export const categories: Record<ProjectCategory, Localized> = {
+  homelab: { pt: 'HomeLabs Cloud', en: 'Cloud HomeLabs' },
   data: { pt: 'Data Science', en: 'Data Science' },
-  front: { pt: 'Front-end', en: 'Front-end' },
+  freelance: { pt: 'Desenvolvimentos Freelance', en: 'Freelance Work' },
+  studies: { pt: 'Estudos e imersões', en: 'Studies and immersions' },
 };
 
 export const projects: Project[] = [
@@ -68,7 +73,7 @@ export const projects: Project[] = [
       en: 'Website for a brand devoted to pet wellbeing, offering quality products and services for animals.',
     },
     image: 'image/projects/5.png',
-    category: 'front',
+    category: 'studies',
     repoUrl: GITHUB,
   },
   {
@@ -78,7 +83,7 @@ export const projects: Project[] = [
       en: 'Front-end recreation of a streaming platform with tracks, podcasts and playlists.',
     },
     image: 'image/projects/6.png',
-    category: 'front',
+    category: 'studies',
     repoUrl: GITHUB,
   },
   {
@@ -88,7 +93,7 @@ export const projects: Project[] = [
       en: 'The first version of my portfolio, built with HTML, CSS and JavaScript.',
     },
     image: 'image/projects/9.png',
-    category: 'front',
+    category: 'studies',
     repoUrl: GITHUB,
   },
 ];
